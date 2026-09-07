@@ -1,0 +1,706 @@
+{
+  "retrieved": "2026-09-07",
+  "images": [
+    {
+      "source": "https://www.logbullet.com/fi/wp-content/uploads/2024/12/20240506_152651-scaled.jpg",
+      "filename": "20240506_152651-scaled.jpg",
+      "path": "/media/20240506_152651-scaled.jpg",
+      "pages": [
+        "fi-original-hd"
+      ],
+      "alt": "",
+      "bytes": 489530
+    },
+    {
+      "source": "https://www.logbullet.com/fi/wp-content/uploads/2024/12/kansilehti.jpg",
+      "filename": "kansilehti.jpg",
+      "path": "/media/kansilehti.jpg",
+      "pages": [
+        "fi-original-hd"
+      ],
+      "alt": "",
+      "bytes": 1018482
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2024/08/SuperBullet_Etuviisto.jpg",
+      "filename": "superbullet_etuviisto.jpg",
+      "path": "/media/superbullet_etuviisto.jpg",
+      "pages": [
+        "fi-superbullet",
+        "superbullet"
+      ],
+      "alt": "",
+      "bytes": 432897
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2024/08/Superbullet_Moottori.jpg",
+      "filename": "superbullet_moottori.jpg",
+      "path": "/media/superbullet_moottori.jpg",
+      "pages": [
+        "fi-superbullet",
+        "superbullet"
+      ],
+      "alt": "",
+      "bytes": 606478
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2024/08/Superbullet_Sivulta.jpg",
+      "filename": "superbullet_sivulta.jpg",
+      "path": "/media/superbullet_sivulta.jpg",
+      "pages": [
+        "fi-superbullet",
+        "superbullet"
+      ],
+      "alt": "",
+      "bytes": 578989
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2024/08/Superbullet_Minilever.jpg",
+      "filename": "superbullet_minilever.jpg",
+      "path": "/media/superbullet_minilever.jpg",
+      "pages": [
+        "fi-superbullet",
+        "superbullet"
+      ],
+      "alt": "",
+      "bytes": 224932
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2024/08/Superbullet_ilmastointi.jpg",
+      "filename": "superbullet_ilmastointi.jpg",
+      "path": "/media/superbullet_ilmastointi.jpg",
+      "pages": [
+        "fi-superbullet",
+        "superbullet"
+      ],
+      "alt": "",
+      "bytes": 384374
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2024/08/Superbullet_Valot.jpg",
+      "filename": "superbullet_valot.jpg",
+      "path": "/media/superbullet_valot.jpg",
+      "pages": [
+        "fi-superbullet",
+        "superbullet"
+      ],
+      "alt": "",
+      "bytes": 293911
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2024/08/Superbullet_Valotyolla.jpg",
+      "filename": "superbullet_valotyolla.jpg",
+      "path": "/media/superbullet_valotyolla.jpg",
+      "pages": [
+        "fi-superbullet",
+        "superbullet"
+      ],
+      "alt": "",
+      "bytes": 572816
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2015/06/cropped-Logbullet_Logo_1240.jpg",
+      "filename": "cropped-logbullet_logo_1240.jpg",
+      "path": "/media/cropped-logbullet_logo_1240.jpg",
+      "pages": [
+        "logbullet-technical-features",
+        "logbullet-cost-effective",
+        "logbullet-user-friendly",
+        "logbullet-built-in-the-woods",
+        "company",
+        "story",
+        "videos",
+        "accessories",
+        "megamax",
+        "superbullet",
+        "media",
+        "home"
+      ],
+      "alt": "Logbullet",
+      "bytes": 27324
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2015/06/nostokyky-1038x576.jpg",
+      "filename": "nostokyky-1038x576.jpg",
+      "path": "/media/nostokyky-1038x576.jpg",
+      "pages": [
+        "logbullet-technical-features"
+      ],
+      "alt": "",
+      "bytes": 82031
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2015/06/kubota-1038x500.jpg",
+      "filename": "kubota-1038x500.jpg",
+      "path": "/media/kubota-1038x500.jpg",
+      "pages": [
+        "logbullet-cost-effective"
+      ],
+      "alt": "",
+      "bytes": 69351
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2015/06/LogbulletTrailerilla.jpg",
+      "filename": "logbullettrailerilla.jpg",
+      "path": "/media/logbullettrailerilla.jpg",
+      "pages": [
+        "logbullet-cost-effective"
+      ],
+      "alt": "LogbulletTrailerilla",
+      "bytes": 119726
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2015/06/ohjauskahva1-1038x576.jpg",
+      "filename": "ohjauskahva1-1038x576.jpg",
+      "path": "/media/ohjauskahva1-1038x576.jpg",
+      "pages": [
+        "logbullet-user-friendly"
+      ],
+      "alt": "",
+      "bytes": 163202
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2015/06/LogbulletTakaanta-1038x576.jpg",
+      "filename": "logbullettakaanta-1038x576.jpg",
+      "path": "/media/logbullettakaanta-1038x576.jpg",
+      "pages": [
+        "logbullet-built-in-the-woods"
+      ],
+      "alt": "",
+      "bytes": 154302
+    },
+    {
+      "source": "https://www.logbullet.com/fi/wp-content/uploads/2023/07/DJI_0910-scaled.jpg",
+      "filename": "dji_0910-scaled.jpg",
+      "path": "/media/dji_0910-scaled.jpg",
+      "pages": [
+        "fi-megamax"
+      ],
+      "alt": "",
+      "bytes": 1004147
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2015/06/sisääntyöntäjä-1038x500.jpg",
+      "filename": "sis--nty-nt-j--1038x500.jpg",
+      "path": "/media/sis--nty-nt-j--1038x500.jpg",
+      "pages": [
+        "company"
+      ],
+      "alt": "",
+      "bytes": 62138
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2015/06/Chainsaw_Spruce_FirstThinning.jpg",
+      "filename": "chainsaw_spruce_firstthinning.jpg",
+      "path": "/media/chainsaw_spruce_firstthinning.jpg",
+      "pages": [
+        "company"
+      ],
+      "alt": "Chainsaw_Spruce_FirstThinning",
+      "bytes": 416933
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2015/06/puunkaatoa-1038x500.jpg",
+      "filename": "puunkaatoa-1038x500.jpg",
+      "path": "/media/puunkaatoa-1038x500.jpg",
+      "pages": [
+        "story"
+      ],
+      "alt": "",
+      "bytes": 139809
+    },
+    {
+      "source": "https://www.logbullet.com/fi/wp-content/uploads/2015/06/logbulletVinssi.jpg",
+      "filename": "logbulletvinssi.jpg",
+      "path": "/media/logbulletvinssi.jpg",
+      "pages": [
+        "accessories"
+      ],
+      "alt": "logbulletvinssi",
+      "bytes": 352526
+    },
+    {
+      "source": "https://www.logbullet.com/fi/wp-content/uploads/2015/06/Logbullet_Lavanjatke.jpg",
+      "filename": "logbullet_lavanjatke.jpg",
+      "path": "/media/logbullet_lavanjatke.jpg",
+      "pages": [
+        "accessories"
+      ],
+      "alt": "",
+      "bytes": 217636
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2019/06/Logbullet_ChainSawHolder.jpg",
+      "filename": "logbullet_chainsawholder.jpg",
+      "path": "/media/logbullet_chainsawholder.jpg",
+      "pages": [
+        "accessories"
+      ],
+      "alt": "",
+      "bytes": 36008
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2021/07/torquebox.jpg",
+      "filename": "torquebox.jpg",
+      "path": "/media/torquebox.jpg",
+      "pages": [
+        "accessories"
+      ],
+      "alt": "",
+      "bytes": 204650
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2020/12/lunchbox.jpg",
+      "filename": "lunchbox.jpg",
+      "path": "/media/lunchbox.jpg",
+      "pages": [
+        "accessories"
+      ],
+      "alt": "",
+      "bytes": 85497
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2020/12/handsupport.jpg",
+      "filename": "handsupport.jpg",
+      "path": "/media/handsupport.jpg",
+      "pages": [
+        "accessories"
+      ],
+      "alt": "",
+      "bytes": 46213
+    },
+    {
+      "source": "https://www.logbullet.com/fi/wp-content/uploads/2018/08/logbullet_puomivalot.jpg",
+      "filename": "logbullet_puomivalot.jpg",
+      "path": "/media/logbullet_puomivalot.jpg",
+      "pages": [
+        "accessories"
+      ],
+      "alt": "",
+      "bytes": 54505
+    },
+    {
+      "source": "https://www.logbullet.com/fi/wp-content/uploads/2015/06/LogbulletLisähydrauliikka.jpg",
+      "filename": "logbulletlis-hydrauliikka.jpg",
+      "path": "/media/logbulletlis-hydrauliikka.jpg",
+      "pages": [
+        "accessories"
+      ],
+      "alt": "logbulletlisahydrauliikka",
+      "bytes": 563004
+    },
+    {
+      "source": "https://www.logbullet.com/fi/wp-content/uploads/2015/06/ExtensionBeam_Farma42.jpg",
+      "filename": "extensionbeam_farma42.jpg",
+      "path": "/media/extensionbeam_farma42.jpg",
+      "pages": [
+        "accessories"
+      ],
+      "alt": "",
+      "bytes": 358679
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2018/08/farma_kahdeksantoimintoa.jpg",
+      "filename": "farma_kahdeksantoimintoa.jpg",
+      "path": "/media/farma_kahdeksantoimintoa.jpg",
+      "pages": [
+        "accessories"
+      ],
+      "alt": "",
+      "bytes": 26472
+    },
+    {
+      "source": "https://www.logbullet.com/fi/wp-content/uploads/2015/06/Logbullet_ElectricExtraValve.jpg",
+      "filename": "logbullet_electricextravalve.jpg",
+      "path": "/media/logbullet_electricextravalve.jpg",
+      "pages": [
+        "accessories"
+      ],
+      "alt": "",
+      "bytes": 441232
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2020/12/bumber.jpg",
+      "filename": "bumber.jpg",
+      "path": "/media/bumber.jpg",
+      "pages": [
+        "accessories"
+      ],
+      "alt": "",
+      "bytes": 401018
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2020/12/logholders.jpg",
+      "filename": "logholders.jpg",
+      "path": "/media/logholders.jpg",
+      "pages": [
+        "accessories"
+      ],
+      "alt": "",
+      "bytes": 188007
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2019/06/Logbullet_Spare_Wheel.jpg",
+      "filename": "logbullet_spare_wheel.jpg",
+      "path": "/media/logbullet_spare_wheel.jpg",
+      "pages": [
+        "accessories"
+      ],
+      "alt": "",
+      "bytes": 49627
+    },
+    {
+      "source": "https://www.logbullet.com/fi/wp-content/uploads/2015/06/FarmaLisäkelevyt.jpg",
+      "filename": "farmalis-kelevyt.jpg",
+      "path": "/media/farmalis-kelevyt.jpg",
+      "pages": [
+        "accessories"
+      ],
+      "alt": "farmalisakelevyt",
+      "bytes": 221232
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2020/12/energygrapple.jpg",
+      "filename": "energygrapple.jpg",
+      "path": "/media/energygrapple.jpg",
+      "pages": [
+        "accessories"
+      ],
+      "alt": "",
+      "bytes": 147145
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2019/06/Logbullet_Filters.jpg",
+      "filename": "logbullet_filters.jpg",
+      "path": "/media/logbullet_filters.jpg",
+      "pages": [
+        "accessories"
+      ],
+      "alt": "",
+      "bytes": 279396
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2023/07/DJI_0910-1-scaled.jpg",
+      "filename": "dji_0910-1-scaled.jpg",
+      "path": "/media/dji_0910-1-scaled.jpg",
+      "pages": [
+        "megamax"
+      ],
+      "alt": "",
+      "bytes": 1004147
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2024/08/Superbullet_Sivulta-1038x576.jpg",
+      "filename": "superbullet_sivulta-1038x576.jpg",
+      "path": "/media/superbullet_sivulta-1038x576.jpg",
+      "pages": [
+        "superbullet"
+      ],
+      "alt": "",
+      "bytes": 106418
+    },
+    {
+      "source": "https://www.logbullet.com/fi/wp-content/uploads/2015/06/Logbullet_TakingLoadRear_1200.jpg",
+      "filename": "logbullet_takingloadrear_1200.jpg",
+      "path": "/media/logbullet_takingloadrear_1200.jpg",
+      "pages": [
+        "media"
+      ],
+      "alt": "",
+      "bytes": 486618
+    },
+    {
+      "source": "https://www.logbullet.com/fi/wp-content/uploads/2015/06/Logbullet_8x8_1200.jpg",
+      "filename": "logbullet_8x8_1200.jpg",
+      "path": "/media/logbullet_8x8_1200.jpg",
+      "pages": [
+        "media"
+      ],
+      "alt": "",
+      "bytes": 512648
+    },
+    {
+      "source": "https://www.logbullet.com/fi/wp-content/uploads/2015/06/Logbullet_FromSideToRear_1200.jpg",
+      "filename": "logbullet_fromsidetorear_1200.jpg",
+      "path": "/media/logbullet_fromsidetorear_1200.jpg",
+      "pages": [
+        "media"
+      ],
+      "alt": "",
+      "bytes": 5470649
+    },
+    {
+      "source": "https://www.logbullet.com/fi/wp-content/uploads/2015/06/Logbullet_LoadAreaView_1200.jpg",
+      "filename": "logbullet_loadareaview_1200.jpg",
+      "path": "/media/logbullet_loadareaview_1200.jpg",
+      "pages": [
+        "media"
+      ],
+      "alt": "",
+      "bytes": 382608
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2015/06/Logbullet_Sivulta_Maastossa.jpg",
+      "filename": "logbullet_sivulta_maastossa.jpg",
+      "path": "/media/logbullet_sivulta_maastossa.jpg",
+      "pages": [
+        "media"
+      ],
+      "alt": "Logbullet_Sivulta_Maastossa",
+      "bytes": 224405
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2015/06/Logbullet_TakaantaAlta.jpg",
+      "filename": "logbullet_takaantaalta.jpg",
+      "path": "/media/logbullet_takaantaalta.jpg",
+      "pages": [
+        "media"
+      ],
+      "alt": "Logbullet_TakaantaAlta",
+      "bytes": 112500
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2015/06/Logbullet_Maastossa.jpg",
+      "filename": "logbullet_maastossa.jpg",
+      "path": "/media/logbullet_maastossa.jpg",
+      "pages": [
+        "media"
+      ],
+      "alt": "Logbullet_Maastossa",
+      "bytes": 232544
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2015/06/Logbullet_Maasto_Lastattuna.jpg",
+      "filename": "logbullet_maasto_lastattuna.jpg",
+      "path": "/media/logbullet_maasto_lastattuna.jpg",
+      "pages": [
+        "media"
+      ],
+      "alt": "Logbullet_Maasto_Lastattuna",
+      "bytes": 239699
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2015/06/Logbullet_Lastaa_Takaviisto.jpg",
+      "filename": "logbullet_lastaa_takaviisto.jpg",
+      "path": "/media/logbullet_lastaa_takaviisto.jpg",
+      "pages": [
+        "media"
+      ],
+      "alt": "Logbullet_Lastaa_Takaviisto",
+      "bytes": 1630203
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2015/06/Logbullet_KuskinTyotila.jpg",
+      "filename": "logbullet_kuskintyotila.jpg",
+      "path": "/media/logbullet_kuskintyotila.jpg",
+      "pages": [
+        "media"
+      ],
+      "alt": "Logbullet_KuskinTyotila",
+      "bytes": 1013674
+    },
+    {
+      "source": "https://www.logbullet.com/wp-content/uploads/2015/06/Logbullet_Farmhouse-1038x576.jpg",
+      "filename": "logbullet_farmhouse-1038x576.jpg",
+      "path": "/media/logbullet_farmhouse-1038x576.jpg",
+      "pages": [
+        "home"
+      ],
+      "alt": "",
+      "bytes": 168127
+    }
+  ],
+  "videos": [
+    {
+      "id": "ENWcI0kk6rw",
+      "url": "https://www.youtube.com/embed/ENWcI0kk6rw?feature=oembed",
+      "pages": [
+        "fi-superbullet"
+      ]
+    },
+    {
+      "id": "fCSzKanpaO0",
+      "url": "https://www.youtube.com/embed/fCSzKanpaO0?feature=oembed",
+      "pages": [
+        "fi-megamax"
+      ]
+    },
+    {
+      "id": "QGGdhsYlBCE",
+      "url": "https://www.youtube.com/embed/QGGdhsYlBCE?feature=oembed",
+      "pages": [
+        "fi-megamax"
+      ]
+    },
+    {
+      "id": "Meev9OlBbWQ",
+      "url": "https://www.youtube.com/embed/Meev9OlBbWQ?feature=oembed",
+      "pages": [
+        "story"
+      ]
+    },
+    {
+      "id": "BOwiyGCLnKc",
+      "url": "https://www.youtube.com/embed/BOwiyGCLnKc?feature=oembed",
+      "pages": [
+        "videos"
+      ]
+    },
+    {
+      "id": "CIsVyuMwSvg",
+      "url": "https://www.youtube.com/embed/CIsVyuMwSvg?feature=oembed",
+      "pages": [
+        "videos",
+        "accessories"
+      ]
+    },
+    {
+      "id": "XI8R5gqMoH0",
+      "url": "https://www.youtube.com/embed/XI8R5gqMoH0?feature=oembed",
+      "pages": [
+        "videos",
+        "megamax"
+      ]
+    },
+    {
+      "id": "playlist:PLseNyacM22qzvwJf_7KGWUohTDXU25C77",
+      "url": "https://www.youtube.com/embed/videoseries?list=PLseNyacM22qzvwJf_7KGWUohTDXU25C77",
+      "pages": [
+        "videos"
+      ]
+    },
+    {
+      "id": "cot_obA7MLA",
+      "url": "https://www.youtube.com/embed/cot_obA7MLA?feature=oembed",
+      "pages": [
+        "videos"
+      ]
+    },
+    {
+      "id": "3xrMLIb2RSk",
+      "url": "https://www.youtube.com/embed/3xrMLIb2RSk?feature=oembed",
+      "pages": [
+        "videos"
+      ]
+    },
+    {
+      "id": "adlrQT_ZPSY",
+      "url": "https://www.youtube.com/embed/adlrQT_ZPSY?feature=oembed",
+      "pages": [
+        "videos"
+      ]
+    },
+    {
+      "id": "1EsmTpsL2uM",
+      "url": "https://www.youtube.com/embed/1EsmTpsL2uM?feature=oembed",
+      "pages": [
+        "videos"
+      ]
+    },
+    {
+      "id": "gcx_RNOpqkk",
+      "url": "https://www.youtube.com/embed/gcx_RNOpqkk?start=15&feature=oembed",
+      "pages": [
+        "videos"
+      ]
+    },
+    {
+      "id": "D14bvw8CI1s",
+      "url": "https://www.youtube.com/embed/D14bvw8CI1s?feature=oembed",
+      "pages": [
+        "videos"
+      ]
+    },
+    {
+      "id": "mcjxLKU9LQM",
+      "url": "https://www.youtube.com/embed/mcjxLKU9LQM?feature=oembed",
+      "pages": [
+        "megamax"
+      ]
+    },
+    {
+      "id": "dzreIzrfRXE",
+      "url": "https://www.youtube.com/embed/dzreIzrfRXE?feature=oembed",
+      "pages": [
+        "superbullet"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "slug": "fi-original-hd",
+      "url": "https://www.logbullet.com/fi/original-hd/",
+      "title": "Original HD – Logbullet"
+    },
+    {
+      "slug": "fi-superbullet",
+      "url": "https://www.logbullet.com/fi/superbullet/",
+      "title": "Superbullet – Logbullet"
+    },
+    {
+      "slug": "logbullet-technical-features",
+      "url": "https://www.logbullet.com/logbullet/technical-features/",
+      "title": "Technical features | Logbullet"
+    },
+    {
+      "slug": "logbullet-cost-effective",
+      "url": "https://www.logbullet.com/logbullet/cost-effective/",
+      "title": "Cost-effective | Logbullet"
+    },
+    {
+      "slug": "logbullet-user-friendly",
+      "url": "https://www.logbullet.com/logbullet/user-friendly/",
+      "title": "User friendly | Logbullet"
+    },
+    {
+      "slug": "logbullet-built-in-the-woods",
+      "url": "https://www.logbullet.com/logbullet/built-in-the-woods/",
+      "title": "Built in the woods | Logbullet"
+    },
+    {
+      "slug": "fi-megamax",
+      "url": "https://www.logbullet.com/fi/megamax/",
+      "title": "Megamax – Logbullet"
+    },
+    {
+      "slug": "company",
+      "url": "https://www.logbullet.com/company/",
+      "title": "Company | Logbullet"
+    },
+    {
+      "slug": "story",
+      "url": "https://www.logbullet.com/story/",
+      "title": "Story | Logbullet"
+    },
+    {
+      "slug": "videos",
+      "url": "https://www.logbullet.com/videos/",
+      "title": "Videos | Logbullet"
+    },
+    {
+      "slug": "accessories",
+      "url": "https://www.logbullet.com/accessories/",
+      "title": "Accessories | Logbullet"
+    },
+    {
+      "slug": "megamax",
+      "url": "https://www.logbullet.com/megamax/",
+      "title": "Megamax | Logbullet"
+    },
+    {
+      "slug": "superbullet",
+      "url": "https://www.logbullet.com/superbullet/",
+      "title": "Superbullet | Logbullet"
+    },
+    {
+      "slug": "media",
+      "url": "https://www.logbullet.com/media/",
+      "title": "Media | Logbullet"
+    },
+    {
+      "slug": "home",
+      "url": "https://www.logbullet.com/",
+      "title": "Logbullet | Mini Forestry Forwarder"
+    }
+  ]
+}
