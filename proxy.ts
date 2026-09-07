@@ -14,4 +14,4 @@ export function proxy(request: NextRequest) {
   url.pathname = `/${locale}${pathname === "/" ? "" : pathname}`
   return NextResponse.redirect(url)
 }
-export const config = { matcher: ["/((?!api|_next|.*\\..*).*)"] }
+export const config = { matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"] }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Inter, Geist_Mono } from "next/font/google"
 import { notFound } from "next/navigation"
+import { Analytics } from "@vercel/analytics/next"
 import { isLocale, locales } from "@/lib/i18n"
 import { getDictionary } from "@/lib/dictionaries"
 import "../globals.css"
@@ -49,7 +50,10 @@ export default async function LocaleLayout({
       data-scroll-behavior="smooth"
       className={`${inter.variable} ${mono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   )
 }
