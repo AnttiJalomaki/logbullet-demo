@@ -5,7 +5,7 @@ export const fi: Dictionary = {
     primary: "Päänavigaatio",
     company: "Yritys",
     media: "Media",
-    parts: "Varaosat",
+    parts: "Kauppa",
     manual: "Ohjeet",
     configure: "Rakenna omasi",
     language: "Kieli",
@@ -79,6 +79,8 @@ export const fi: Dictionary = {
   },
   footer: {
     tagline: "Pieniä koneita.\nSuurempi yhteys metsään.",
+    social: "Seuraa Logbulletia",
+    opensNewTab: "avautuu uuteen välilehteen",
     machines: "Koneemme",
     discover: "Tutustu",
     contact: "Puhutaan metsätöistä.",

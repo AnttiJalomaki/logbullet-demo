@@ -4,7 +4,7 @@ export const en = {
     primary: "Main navigation",
     company: "Company",
     media: "Media",
-    parts: "Service parts",
+    parts: "Shop",
     manual: "Manual",
     configure: "Build yours",
     language: "Language",
@@ -79,6 +79,8 @@ export const en = {
   },
   footer: {
     tagline: "Small machines.\nA bigger connection to the forest.",
+    social: "Follow Logbullet",
+    opensNewTab: "opens in a new tab",
     machines: "Our machines",
     discover: "Discover",
     contact: "Let’s talk forestry.",

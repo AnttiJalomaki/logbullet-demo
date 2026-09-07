@@ -41,7 +41,10 @@ export default async function Home({
             </h1>
             <p className="hero-description">{d.hero.description}</p>
             <div className="hero-buttons">
-              <Link href={`/${lang}#machines`} className="button button-orange">
+              <Link
+                href={`/${lang}/configure/logbullet`}
+                className="button button-orange"
+              >
                 {d.hero.primary}
                 <ArrowUpRight size={18} />
               </Link>

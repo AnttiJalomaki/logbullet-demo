@@ -782,6 +782,24 @@ p {
   line-height: 1.4;
   margin: 23px 0;
 }
+.footer-socials {
+  display: flex;
+  gap: 8px;
+}
+.footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  transition: background-color 0.2s;
+}
+.footer-socials a:hover,
+.footer-socials a:focus-visible {
+  background: #ffffff20;
+}
 .footer-links {
   display: flex;
   flex-direction: column;

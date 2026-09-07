@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { ArrowUp, ArrowUpRight } from "lucide-react"
 import { Logo } from "./logo"
+import { SocialLinks } from "./social-links"
 import type { Dictionary } from "@/lib/dictionaries"
 import type { Locale } from "@/lib/i18n"
 import { machines } from "@/lib/catalog"
@@ -11,6 +12,7 @@ export function Footer({ locale, d }: { locale: Locale; d: Dictionary }) {
         <div className="footer-brand">
           <Logo href={`/${locale}`} />
           <p className="preserve-lines">{d.footer.tagline}</p>
+          <SocialLinks d={d} />
         </div>
         <div className="footer-links">
           <span className="footer-label">{d.footer.machines}</span>
