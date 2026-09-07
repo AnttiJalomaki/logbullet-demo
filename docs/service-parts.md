@@ -2,7 +2,7 @@
 
 ## Prototype scope
 
-The parts store has ten bilingual catalogue entries, category/model/stock filters, typo-tolerant search, sorting, dynamic product pages, a persistent cart, delivery or workshop collection, customer details, saved requests, text downloads and reordering. Search and filters are represented in the URL. No extra dependencies or environment variables are needed.
+The parts store has ten bilingual catalogue entries, category/model/stock filters, typo-tolerant search, sorting, dynamic product pages, a persistent cart, delivery or workshop collection, customer details, saved requests, text downloads and reordering. Search and filters are represented in the URL. Parts search shares the compact bar with the account and cart controls; from a product, account or cart page, submitting the search opens the catalogue results. Both parts and manual pages omit the former introductory headings and search hint. No extra dependencies or environment variables are needed.
 
 `lib/parts.ts` contains the catalogue and search adapter. `lib/parts-copy.ts` contains typed English/Finnish UI strings. Prices use integer euro cents. Search normalizes accents, recognizes compact SKUs and aliases, and uses bounded Damerau–Levenshtein matching for misspellings. Short tokens require exact or prefix matches. All query tokens must match. The current in-memory search is appropriate for these ten items; replace this adapter with a paginated search service and server-provided facets when importing a large catalogue.
 
@@ -30,7 +30,7 @@ Manufacturer Porttivuori Oy and founder/designer Pekka Syvänen: [company source
 
 ## Maintenance content and imagery
 
-`lib/manual.ts` contains bilingual oil/filter, daily-check and greasing instructions. Guides have interactive step completion, print styles and links to relevant catalogue filters. The checkmarks are a session checklist, not a durable machine service record.
+`lib/manual.ts` contains a library of 24 bilingual topics across six categories. Oil/filter, daily-check and greasing topics open the existing illustrated guides; the other 21 are intentionally inactive layout placeholders, with no empty pages or placeholder notices. A compact search bar matches the parts-shop account/cart bar, with horizontal category navigation beneath it. Topic search and category selections are stored in the URL. Guides have interactive step completion, print styles and links to relevant catalogue filters. The checkmarks are a session checklist, not a durable machine service record.
 
 Instructions intentionally omit unverified capacities, oil grades, torque values and intervals. The page links to the manufacturer’s [Kubota 05-series operator manual](https://media.kubota.io/uploads/Kubota-Engines%E2%80%9305-Series-Manual.pdf), which includes V1505 variants. The generic maintenance outline should receive a machine-specific engineering review before production use. Images illustrate the UI and do not identify exact service points on a production Logbullet.
 

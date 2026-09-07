@@ -20,7 +20,7 @@ Open http://localhost:3000/en or http://localhost:3000/fi. The root URL chooses 
 - `/en/company` — the story, people and contact details behind Logbullet (`/en/story` redirects here)
 - `/en/service-parts` — searchable parts catalogue, product pages and cart
 - `/en/service-parts/account` — saved customer details and request history
-- `/en/manual` — illustrated maintenance guides and checklists
+- `/en/manual` — 24-topic library with search, category navigation and three illustrated guides
 - `/en/order` — the most recent request saved in this browser
 
 Every route also exists under `/fi`. Language switching preserves the current route, equipment query parameters and configurator step. Equipment selections are shareable in the URL. Unsubmitted contact fields stay in memory and reset on reload or language changes.

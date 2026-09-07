@@ -2,7 +2,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useSearchParams } from "next/navigation"
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import {
   ArrowRight,
   ArrowLeft,
@@ -36,6 +36,22 @@ export function ManualContent({ locale }: { locale: Locale }) {
   const query = params.get("q") ?? ""
   const topics = findManualTopics(query, selectedCategory?.id)
   const allLabel = fi ? "Kaikki aiheet" : "All topics"
+  const categoryList = useRef<HTMLElement>(null)
+  const activeCategory = useRef<HTMLButtonElement>(null)
+  const activeCategoryId = selectedCategory?.id
+  useEffect(() => {
+    const list = categoryList.current
+    const active = activeCategory.current
+    if (!list || !active || list.scrollWidth <= list.clientWidth) return
+    const offset =
+      active.getBoundingClientRect().left -
+      list.getBoundingClientRect().left +
+      list.scrollLeft
+    list.scrollTo({
+      left: offset - (list.clientWidth - active.clientWidth) / 2,
+      behavior: "auto",
+    })
+  }, [activeCategoryId])
   function search(value: string) {
     const next = new URLSearchParams(params)
     next.delete("guide")
@@ -83,10 +99,12 @@ export function ManualContent({ locale }: { locale: Locale }) {
         </nav>
       </div>
       <nav
+        ref={categoryList}
         className="manual-category-nav"
         aria-label={fi ? "Ohjeiden aihealueet" : "Manual categories"}
       >
         <button
+          ref={!selectedCategory ? activeCategory : undefined}
           type="button"
           aria-pressed={!selectedCategory}
           onClick={() => selectCategory("")}
@@ -95,6 +113,9 @@ export function ManualContent({ locale }: { locale: Locale }) {
         </button>
         {manualCategories.map((category) => (
           <button
+            ref={
+              selectedCategory?.id === category.id ? activeCategory : undefined
+            }
             type="button"
             key={category.id}
             aria-pressed={selectedCategory?.id === category.id}
