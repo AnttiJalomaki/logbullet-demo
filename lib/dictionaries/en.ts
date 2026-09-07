@@ -2,9 +2,10 @@ export const en = {
   nav: {
     models: "Machines",
     primary: "Main navigation",
-    why: "Why Logbullet",
-    story: "Our story",
-    media: "In the forest",
+    company: "Company",
+    media: "Media",
+    parts: "Service parts",
+    manual: "Manual",
     configure: "Build yours",
     language: "Language",
     menu: "Open menu",
@@ -18,6 +19,8 @@ export const en = {
       "Go where the work takes you. Meet three capable forest machines, built to do more with less.",
     primary: "Find your Logbullet",
     secondary: "See it in action",
+    pauseVideo: "Pause background video",
+    playVideo: "Play background video",
   },
   home: {
     rangeTitle: "The right machine.\nFor your kind of forest.",

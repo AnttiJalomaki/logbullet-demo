@@ -33,9 +33,10 @@ export function Header({
     setOpen(false)
   }
   const links = [
-    { href: `/${locale}#why-logbullet`, text: d.nav.why },
-    { href: `/${locale}/story`, text: d.nav.story },
+    { href: `/${locale}/company`, text: d.nav.company },
     { href: `/${locale}/media`, text: d.nav.media },
+    { href: `/${locale}/service-parts`, text: d.nav.parts },
+    { href: `/${locale}/manual`, text: d.nav.manual },
   ]
   return (
     <>

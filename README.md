@@ -17,7 +17,10 @@ Open http://localhost:3000/en or http://localhost:3000/fi. The root URL chooses 
 - `/en/models/logbullet` — model details; also `superbullet` and `megamax`
 - `/en/configure/logbullet` — machine → equipment → order request
 - `/en/media` — the original photo and film collection
-- `/en/story` — the story behind Logbullet
+- `/en/company` — the story, people and contact details behind Logbullet (`/en/story` redirects here)
+- `/en/service-parts` — searchable parts catalogue, product pages and cart
+- `/en/service-parts/account` — saved customer details and request history
+- `/en/manual` — illustrated maintenance guides and checklists
 - `/en/order` — the most recent request saved in this browser
 
 Every route also exists under `/fi`. Language switching preserves the current route, equipment query parameters and configurator step. Equipment selections are shareable in the URL. Unsubmitted contact fields stay in memory and reset on reload or language changes.
@@ -27,6 +30,8 @@ Every route also exists under `/fi`. Language switching preserves the current ro
 The configurator has machine-specific equipment, estimates, mutually exclusive choices, and the original machine’s crane/control-valve dependency. Prices without a published source are marked as requiring a quote. Photos switch to the selected equipment or machine area. The lazy-loaded Three.js concept supports orbit, zoom, focus transitions and selected accessory visibility, with a photography fallback when WebGL fails. The renderer stops issuing frames when the scene is idle.
 
 Order requests are **demo-only**. Submitting saves one request to `localStorage`, opens a confirmation, and enables a text download or deletion. Nothing is sent to Logbullet and no payment is collected. The newest saved request replaces the previous one. Production needs a real server-side order service and durable storage.
+
+The service-parts shop adds ten bilingual products, typo-tolerant search, category/model/stock filters, sorting, product details, a quantity-aware cart, delivery/collection choices and a customer workspace. Parts requests support saved history, downloads and reordering; payment remains off-site. These profiles and requests use a separate localStorage record and do not implement authentication. See [service-parts implementation notes](docs/service-parts.md) for fixture data, assets and the production integration boundary.
 
 ## Content and accuracy
 
@@ -49,7 +54,7 @@ bun run typecheck
 bun run build
 ```
 
-Tests cover pricing, equipment compatibility, mutually exclusive options, unknown query options, unpriced equipment and saved-order parsing. Browser checks cover desktop and mobile layouts, configuration, price changes, camera focus, language switching, order saving/download/deletion and media interactions.
+Fifteen tests cover pricing, equipment compatibility, mutually exclusive options, unknown query options, unpriced equipment, fuzzy part search, cart quantities, saved-price snapshots and saved-order parsing. Browser checks cover desktop and mobile layouts, configuration, price changes, camera focus, language switching, order saving/download/deletion and media interactions.
 
 ## Vercel
 

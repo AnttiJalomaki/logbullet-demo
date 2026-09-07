@@ -3,9 +3,10 @@ export const fi: Dictionary = {
   nav: {
     models: "Koneet",
     primary: "Päänavigaatio",
-    why: "Miksi Logbullet",
-    story: "Tarinamme",
-    media: "Metsässä",
+    company: "Yritys",
+    media: "Media",
+    parts: "Varaosat",
+    manual: "Ohjeet",
     configure: "Rakenna omasi",
     language: "Kieli",
     menu: "Avaa valikko",
@@ -19,6 +20,8 @@ export const fi: Dictionary = {
       "Sinne, missä työtä on. Kolme kyvykästä metsäkonetta, jotka tekevät pienestä enemmän.",
     primary: "Löydä oma Logbullet",
     secondary: "Katso kone työssä",
+    pauseVideo: "Pysäytä taustavideo",
+    playVideo: "Toista taustavideo",
   },
   home: {
     rangeTitle: "Oikea kone.\nJuuri sinun metsääsi.",

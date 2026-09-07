@@ -22,8 +22,10 @@ export function Footer({ locale, d }: { locale: Locale; d: Dictionary }) {
         </div>
         <div className="footer-links">
           <span className="footer-label">{d.footer.discover}</span>
-          <Link href={`/${locale}/story`}>{d.nav.story}</Link>
+          <Link href={`/${locale}/company`}>{d.nav.company}</Link>
           <Link href={`/${locale}/media`}>{d.nav.media}</Link>
+          <Link href={`/${locale}/service-parts`}>{d.nav.parts}</Link>
+          <Link href={`/${locale}/manual`}>{d.nav.manual}</Link>
           <Link href={`/${locale}/configure/logbullet`}>{d.nav.configure}</Link>
         </div>
         <div className="footer-contact">

@@ -6,6 +6,7 @@ import { Header } from "@/components/site/header"
 import { Footer } from "@/components/site/footer"
 import { VideoDialog } from "@/components/site/video-dialog"
 import { CompareDialog } from "@/components/site/compare-dialog"
+import { HeroBackground } from "@/components/site/hero-background"
 import { getDictionary } from "@/lib/dictionaries"
 import { isLocale, money, number } from "@/lib/i18n"
 import { machines, formatPowerValue } from "@/lib/catalog"
@@ -22,20 +23,15 @@ export default async function Home({
       <Header locale={lang} d={d} overlay />
       <main id="main">
         <section className="home-hero">
-          <div className="hero-image">
-            <Image
-              src="/media/logbullet_maastossa.jpg"
-              alt={
-                lang === "fi"
-                  ? "Oranssi Logbullet suomalaisessa koivumetsässä"
-                  : "An orange Logbullet between birch trees in a Finnish forest"
-              }
-              fill
-              preload
-              sizes="100vw"
-              className="image-cover"
-            />
-          </div>
+          <HeroBackground
+            alt={
+              lang === "fi"
+                ? "Oranssi Logbullet suomalaisessa koivumetsässä"
+                : "An orange Logbullet between birch trees in a Finnish forest"
+            }
+            pauseLabel={d.hero.pauseVideo}
+            playLabel={d.hero.playVideo}
+          />
           <div className="hero-shade" />
           <div className="hero-content">
             <h1>

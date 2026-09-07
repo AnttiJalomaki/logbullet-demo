@@ -32,6 +32,22 @@ The requested three-model concept is preserved, with no availability or demo not
 
 ## Media and visualization
 
+The homepage uses `public/media/logbullet-hero.mp4`, a silent 54-second derivative of `logbullet-demo-montage.mp4` (1280 × 720, 25 fps, H.264, 4.8 MB). It retains the requested cuts from YouTube videos `xafrUxlwOGc` (00:00–00:13, 01:30–01:35, 01:58–02:20) and `PMIGr72UnxA` (00:16–00:30). The full montage remains available separately.
+
+The current photo loads first and stays for at least three seconds. Video loading begins after the photo loads; the small clip buffers completely before playback to avoid interruptions on slow connections, then fades in after a decoded frame. The hero loops silently, pauses offscreen or in a hidden tab, offers a pause control, and returns to the photo if playback fails. Reduced-motion and data-saving preferences keep the photo and skip the video download.
+
+To regenerate the background copy from the montage:
+
+```sh
+ffmpeg -i public/media/logbullet-demo-montage.mp4 -map 0:v:0 -an \
+  -vf 'fps=25,scale=1280:720:flags=lanczos,setsar=1' \
+  -c:v libx264 -preset slow -crf 25 -maxrate 700k -bufsize 1400k \
+  -profile:v high -level:v 3.1 -pix_fmt yuv420p -g 50 -keyint_min 50 \
+  -sc_threshold 0 -x264-params 'nal-hrd=vbr:force-cfr=1:ref=3:bframes=2' \
+  -color_range tv -colorspace bt709 -color_primaries bt709 -color_trc bt709 \
+  -movflags +faststart -map_metadata -1 public/media/logbullet-hero.mp4
+```
+
 Photos and source footage are authentic. New page copy is rewritten in English and Finnish. The original media page permits photography in Logbullet-related stories: https://www.logbullet.com/media/. Full source files remain available in the archive, including earlier orange machines and newer charcoal machines.
 
 Sources reviewed include the homepage, both Megamax pages, both Superbullet pages, the Finnish Original HD page, accessories, media, videos, story, company, and the four English Logbullet feature pages. The manifest is a snapshot of these pages, not a crawl of every translated page or future website update.
