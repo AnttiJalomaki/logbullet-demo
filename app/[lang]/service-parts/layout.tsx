@@ -5,6 +5,7 @@ import { ShopBar } from "@/components/store/shop-ui"
 import { isLocale } from "@/lib/i18n"
 import { getDictionary } from "@/lib/dictionaries"
 import "@/components/store/store.css"
+import "@/components/site/section-bar.css"
 
 export default async function PartsLayout({
   children,

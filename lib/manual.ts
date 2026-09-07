@@ -1,5 +1,179 @@
 import type { Localized } from "./catalog"
 const l = (en: string, fi: string): Localized => ({ en, fi })
+
+export const manualCategories = [
+  { id: "basics", name: l("Getting started", "Alkuun pääseminen") },
+  { id: "operation", name: l("Operation", "Käyttö") },
+  { id: "service", name: l("Engine & service", "Moottori ja huolto") },
+  {
+    id: "hydraulics",
+    name: l("Crane & hydraulics", "Kuormain ja hydrauliikka"),
+  },
+  { id: "drivetrain", name: l("Wheels & drive", "Pyörät ja voimansiirto") },
+  { id: "electrical", name: l("Electrical", "Sähköjärjestelmä") },
+] as const
+export type ManualCategoryId = (typeof manualCategories)[number]["id"]
+export type ManualTopic = {
+  id: string
+  category: ManualCategoryId
+  title: Localized
+  guide?: "oil" | "daily" | "grease"
+  keywords?: string
+}
+
+// Topics without a guide are intentionally non-navigating layout placeholders.
+export const manualTopics: ManualTopic[] = [
+  {
+    id: "safety",
+    category: "basics",
+    title: l("Safety & protective equipment", "Turvallisuus ja suojavarusteet"),
+  },
+  {
+    id: "identification",
+    category: "basics",
+    title: l("Machine identification", "Koneen tunnistetiedot"),
+    keywords: "serial number sarjanumero",
+  },
+  {
+    id: "controls",
+    category: "basics",
+    title: l("Operator controls", "Hallintalaitteet"),
+  },
+  {
+    id: "transport",
+    category: "basics",
+    title: l("Transport & securing the machine", "Kuljetus ja koneen sidonta"),
+    keywords: "trailer perävaunu",
+  },
+  {
+    id: "daily",
+    category: "operation",
+    title: l("Daily checks", "Päivittäiset tarkistukset"),
+    guide: "daily",
+  },
+  {
+    id: "starting",
+    category: "operation",
+    title: l("Starting & stopping", "Käynnistys ja sammutus"),
+  },
+  {
+    id: "driving",
+    category: "operation",
+    title: l("Driving & steering", "Ajaminen ja ohjaus"),
+  },
+  {
+    id: "loading",
+    category: "operation",
+    title: l("Loading & unloading timber", "Puutavaran kuormaus ja purku"),
+  },
+  {
+    id: "oil",
+    category: "service",
+    title: l("Engine oil & filter", "Moottoriöljy ja suodatin"),
+    guide: "oil",
+    keywords: "oil change öljynvaihto",
+  },
+  {
+    id: "fuel",
+    category: "service",
+    title: l("Fuel system & fuel filter", "Polttoainejärjestelmä ja suodatin"),
+    keywords: "diesel",
+  },
+  {
+    id: "air-filter",
+    category: "service",
+    title: l("Air filter replacement", "Ilmansuodattimen vaihto"),
+  },
+  {
+    id: "cooling",
+    category: "service",
+    title: l("Cooling system & coolant", "Jäähdytysjärjestelmä ja neste"),
+  },
+  {
+    id: "grease",
+    category: "hydraulics",
+    title: l("Greasing points", "Rasvauspisteet"),
+    guide: "grease",
+    keywords: "lubrication voitelu rasvaus",
+  },
+  {
+    id: "crane-controls",
+    category: "hydraulics",
+    title: l("Crane controls & grapple", "Kuormaimen hallinta ja koura"),
+  },
+  {
+    id: "hydraulic-oil",
+    category: "hydraulics",
+    title: l("Hydraulic oil & filters", "Hydrauliikkaöljy ja suodattimet"),
+  },
+  {
+    id: "hoses",
+    category: "hydraulics",
+    title: l("Hoses & couplings", "Letkut ja liittimet"),
+  },
+  {
+    id: "tyres",
+    category: "drivetrain",
+    title: l("Tyres & pressures", "Renkaat ja rengaspaineet"),
+  },
+  {
+    id: "bearings",
+    category: "drivetrain",
+    title: l("Wheel bearings", "Pyöränlaakerit"),
+  },
+  {
+    id: "traction",
+    category: "drivetrain",
+    title: l("Traction & drive system", "Pito ja vetojärjestelmä"),
+  },
+  {
+    id: "brakes",
+    category: "drivetrain",
+    title: l("Brakes & parking brake", "Jarrut ja seisontajarru"),
+  },
+  {
+    id: "battery",
+    category: "electrical",
+    title: l("Battery & charging", "Akku ja lataus"),
+  },
+  {
+    id: "fuses",
+    category: "electrical",
+    title: l("Fuses & relays", "Sulakkeet ja releet"),
+  },
+  {
+    id: "lights",
+    category: "electrical",
+    title: l("Work lights & wiring", "Työvalot ja johdotus"),
+  },
+  {
+    id: "fault-codes",
+    category: "electrical",
+    title: l("Fault codes & ECU", "Vikakoodit ja ECU"),
+    keywords: "troubleshooting vianetsintä",
+  },
+]
+
+export function findManualTopics(query: string, category = "") {
+  const normalize = (value: string) =>
+    value
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .trim()
+  const words = normalize(query).split(/\s+/).filter(Boolean)
+  return manualTopics.filter((topic) => {
+    if (category && topic.category !== category) return false
+    const categoryName = manualCategories.find(
+      (item) => item.id === topic.category
+    )!.name
+    const text = normalize(
+      `${topic.title.en} ${topic.title.fi} ${categoryName.en} ${categoryName.fi} ${topic.keywords ?? ""}`
+    )
+    return words.every((word) => text.includes(word))
+  })
+}
+
 export const maintenanceGuides = [
   {
     id: "oil",

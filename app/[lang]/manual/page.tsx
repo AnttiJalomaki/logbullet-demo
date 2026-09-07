@@ -6,6 +6,7 @@ import { ManualContent } from "@/components/site/manual-content"
 import { getDictionary } from "@/lib/dictionaries"
 import { isLocale } from "@/lib/i18n"
 import "@/components/site/support-pages.css"
+import "@/components/site/section-bar.css"
 export async function generateMetadata({
   params,
 }: {

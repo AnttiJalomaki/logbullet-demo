@@ -1,8 +1,8 @@
 "use client"
 import Link from "next/link"
 import Image from "next/image"
-import { usePathname } from "next/navigation"
-import { useState } from "react"
+import { usePathname, useRouter, useSearchParams } from "next/navigation"
+import { Suspense, useState } from "react"
 import {
   ArrowRight,
   Check,
@@ -15,6 +15,7 @@ import type { Locale } from "@/lib/i18n"
 import { partMoney, type Part } from "@/lib/parts"
 import { partsCopy } from "@/lib/parts-copy"
 import { addPart, usePartsState } from "./parts-state"
+import { BarSearch } from "@/components/site/bar-search"
 
 export function ShopBar({ locale }: { locale: Locale }) {
   const t = partsCopy(locale)
@@ -23,33 +24,86 @@ export function ShopBar({ locale }: { locale: Locale }) {
   const count = cart.reduce((total, line) => total + line.quantity, 0)
   const root = `/${locale}/service-parts`
   return (
-    <nav className="parts-bar" aria-label={t.shop}>
+    <div className="section-toolbar">
       <Link
         href={root}
-        className="parts-bar-title"
+        className="section-toolbar-title"
         aria-current={pathname === root ? "page" : undefined}
       >
         {t.shop}
       </Link>
-      <div>
+      <Suspense
+        fallback={
+          <BarSearch label={t.search} clearLabel={t.clear} value="" disabled />
+        }
+      >
+        <ShopSearch key={pathname} locale={locale} />
+      </Suspense>
+      <nav className="section-toolbar-actions" aria-label={t.shop}>
         <Link
           href={`${root}/account`}
           aria-label={t.account}
           aria-current={pathname === `${root}/account` ? "page" : undefined}
         >
           <UserRound size={20} />
-          <span>{t.account}</span>
+          <span className="section-action-label">{t.account}</span>
         </Link>
         <Link
           href={`${root}/cart`}
+          aria-label={`${t.cart}: ${count}`}
           aria-current={pathname === `${root}/cart` ? "page" : undefined}
         >
           <ShoppingBag size={20} />
-          <span>{t.cart}</span>
-          <span className="parts-cart-count">{count}</span>
+          <span className="section-action-label">{t.cart}</span>
+          <span
+            className="parts-cart-count"
+            aria-live="polite"
+            aria-atomic="true"
+          >
+            {count}
+          </span>
         </Link>
-      </div>
-    </nav>
+      </nav>
+    </div>
+  )
+}
+function ShopSearch({ locale }: { locale: Locale }) {
+  const t = partsCopy(locale)
+  const params = useSearchParams()
+  const pathname = usePathname()
+  const router = useRouter()
+  const root = `/${locale}/service-parts`
+  const isCatalog = pathname === root
+  const [draft, setDraft] = useState("")
+  const query = isCatalog ? (params.get("q") ?? "") : draft
+  function update(value: string) {
+    if (!isCatalog) {
+      setDraft(value)
+      return
+    }
+    const next = new URLSearchParams(params)
+    if (value) next.set("q", value)
+    else next.delete("q")
+    window.history.replaceState(
+      null,
+      "",
+      `${root}${next.size ? `?${next}` : ""}`
+    )
+  }
+  return (
+    <BarSearch
+      label={t.search}
+      clearLabel={t.clear}
+      value={query}
+      onChange={update}
+      onSubmit={() => {
+        if (!isCatalog) {
+          const next = new URLSearchParams()
+          if (query.trim()) next.set("q", query.trim())
+          router.push(`${root}${next.size ? `?${next}` : ""}`)
+        }
+      }}
+    />
   )
 }
 export function PartImage({

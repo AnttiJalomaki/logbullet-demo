@@ -46,42 +46,7 @@ export function PartsCatalog({ locale }: { locale: Locale }) {
   const active = !!(query || category || model || stock)
   return (
     <>
-      <section className="parts-hero">
-        <h1>{t.title}</h1>
-        <p>{t.intro}</p>
-        <form
-          role="search"
-          className="parts-search"
-          onSubmit={(event) => event.preventDefault()}
-        >
-          <Search size={24} aria-hidden="true" />
-          <label className="sr-only" htmlFor="parts-search">
-            {t.search}
-          </label>
-          <input
-            id="parts-search"
-            type="search"
-            maxLength={120}
-            placeholder={t.placeholder}
-            value={query}
-            onChange={(event) => update("q", event.target.value)}
-            aria-describedby="parts-search-hint"
-            autoComplete="off"
-          />
-          {query && (
-            <button
-              type="button"
-              onClick={() => update("q", "")}
-              aria-label={t.clear}
-            >
-              <X size={20} />
-            </button>
-          )}
-        </form>
-        <p className="parts-search-hint" id="parts-search-hint">
-          {t.searchHint}
-        </p>
-      </section>
+      <h1 className="sr-only">{t.shop}</h1>
       <div className="parts-catalog-layout">
         <aside className="parts-filters-desktop">
           <CatalogFilters

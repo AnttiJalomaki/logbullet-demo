@@ -1,0 +1,132 @@
+.section-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: auto minmax(220px, 680px) auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  min-height: 76px;
+  padding: 12px 5%;
+  background: var(--ink);
+  color: var(--paper);
+}
+.section-toolbar-title {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.section-toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+.section-toolbar-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+.section-toolbar-actions a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-color: var(--orange);
+  text-underline-offset: 7px;
+}
+.section-bar-search {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  width: 100%;
+  height: 50px;
+  border: 1px solid #d5d7d2;
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--ink);
+}
+.section-bar-search:focus-within {
+  outline: 2px solid var(--orange);
+  outline-offset: 3px;
+}
+.section-bar-search button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  min-height: 44px;
+  background: transparent;
+  color: inherit;
+  flex: 0 0 auto;
+}
+.section-bar-search input {
+  min-width: 0;
+  width: 100%;
+  height: 46px;
+  padding: 0 12px 0 0;
+  background: transparent;
+  color: inherit;
+  font-size: 1rem;
+  outline: none;
+}
+.section-bar-search input::placeholder {
+  color: var(--muted-foreground);
+  opacity: 1;
+}
+.section-bar-search input::-webkit-search-cancel-button {
+  display: none;
+}
+@media (max-width: 1000px) {
+  .section-toolbar {
+    gap: 22px;
+    grid-template-columns: auto minmax(180px, 1fr) auto;
+  }
+  .section-toolbar-actions {
+    gap: 10px;
+  }
+  .section-toolbar-actions .section-action-label {
+    display: none;
+  }
+  .section-toolbar-actions a {
+    justify-content: center;
+    min-width: 44px;
+  }
+}
+@media (max-width: 600px) {
+  .section-toolbar {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px;
+    padding: 10px 4%;
+    min-height: 70px;
+  }
+  .section-toolbar-title {
+    display: none;
+  }
+  .section-toolbar-actions {
+    gap: 4px;
+  }
+  .section-toolbar-actions a {
+    gap: 5px;
+  }
+  .section-toolbar-actions svg {
+    width: 19px;
+  }
+  .section-bar-search {
+    height: 48px;
+  }
+  .section-bar-search input {
+    height: 44px;
+    padding-right: 6px;
+  }
+  .section-bar-search button {
+    width: 38px;
+  }
+}
+@media print {
+  .section-toolbar {
+    display: none !important;
+  }
+}

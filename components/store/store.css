@@ -7,39 +7,6 @@
   padding: 0 5%;
   min-height: 65vh;
 }
-.parts-bar {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  min-height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  background: var(--ink);
-  color: var(--paper);
-  padding: 8px 5%;
-}
-.parts-bar a {
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 1rem;
-}
-.parts-bar a[aria-current="page"] {
-  text-decoration: underline;
-  text-decoration-color: var(--orange);
-  text-underline-offset: 8px;
-}
-.parts-bar-title {
-  font-weight: 600;
-}
-.parts-bar > div {
-  display: flex;
-  gap: 36px;
-  align-items: center;
-}
 .parts-cart-count {
   display: inline-flex;
   min-width: 26px;
@@ -53,64 +20,16 @@
   font-weight: 650;
   font-size: 1rem;
 }
-.parts-hero {
-  padding: 70px 0 50px;
-}
-.parts-hero h1,
 .parts-flow-page > h1 {
   font-size: clamp(2.6rem, 4.8vw, 4.7rem);
   line-height: 1.07;
   max-width: 1050px;
 }
-.parts-hero > p {
-  margin-top: 18px;
-  color: var(--parts-muted);
-  font-size: 1.15rem;
-}
-.parts-search {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  background: white;
-  border: 1px solid #aaa9a1;
-  border-radius: 4px;
-  min-height: 66px;
-  max-width: 900px;
-  padding: 0 18px;
-  margin-top: 34px;
-}
-.parts-search:focus-within {
-  outline: 2px solid var(--orange);
-  outline-offset: 2px;
-}
-.parts-search input {
-  font-size: 1.1rem;
-  min-width: 0;
-  width: 100%;
-  height: 64px;
-  outline: none;
-  background: transparent;
-}
-.parts-search input::-webkit-search-cancel-button {
-  display: none;
-}
-.parts-search button {
-  width: 44px;
-  height: 44px;
-  display: grid;
-  place-items: center;
-  background: transparent;
-  flex: 0 0 auto;
-}
-.parts-hero .parts-search-hint {
-  font-size: 1rem;
-  margin-top: 10px;
-}
 .parts-catalog-layout {
   display: grid;
   grid-template-columns: 225px minmax(0, 1fr);
   gap: 40px;
-  padding-bottom: 65px;
+  padding-block: 32px 65px;
 }
 .parts-filters-desktop {
   align-self: start;
@@ -1075,9 +994,6 @@
     background: var(--orange);
     border-radius: 50%;
   }
-  .parts-hero {
-    padding-top: 45px;
-  }
   .parts-support {
     align-items: start;
     flex-direction: column;
@@ -1122,58 +1038,6 @@
   }
 }
 @media (max-width: 600px) {
-  .parts-bar {
-    padding-inline: 5%;
-    gap: 10px;
-    min-height: 60px;
-  }
-  .parts-bar > div {
-    gap: 17px;
-  }
-  .parts-bar a {
-    gap: 7px;
-  }
-  .parts-bar-title {
-    max-width: 90px;
-    line-height: 1.2;
-  }
-  .parts-bar a svg {
-    width: 18px;
-  }
-  .parts-bar > div a:first-child span {
-    display: none;
-  }
-  .parts-bar > div a:first-child {
-    width: 44px;
-    justify-content: center;
-  }
-  .parts-bar > div a:first-child::after {
-    content: none;
-  }
-  .parts-hero {
-    padding: 40px 0 30px;
-  }
-  .parts-hero h1,
-  .parts-flow-page > h1 {
-    font-size: 2.6rem;
-  }
-  .parts-hero > p {
-    font-size: 1.05rem;
-  }
-  .parts-search {
-    margin-top: 25px;
-    gap: 10px;
-    min-height: 60px;
-    padding: 0 12px;
-  }
-  .parts-search input {
-    height: 58px;
-    font-size: 1rem;
-  }
-  .parts-search > svg {
-    width: 20px;
-    flex-shrink: 0;
-  }
   .parts-grid,
   .parts-related .parts-grid {
     grid-template-columns: 1fr;

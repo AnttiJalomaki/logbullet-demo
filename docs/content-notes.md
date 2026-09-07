@@ -34,7 +34,7 @@ The requested three-model concept is preserved, with no availability or demo not
 
 The homepage uses `public/media/logbullet-hero.mp4`, a silent 54-second derivative of `logbullet-demo-montage.mp4` (1280 × 720, 25 fps, H.264, 4.8 MB). It retains the requested cuts from YouTube videos `xafrUxlwOGc` (00:00–00:13, 01:30–01:35, 01:58–02:20) and `PMIGr72UnxA` (00:16–00:30). The full montage remains available separately.
 
-The current photo loads first and stays for at least three seconds. Video loading begins after the photo loads; the small clip buffers completely before playback to avoid interruptions on slow connections, then fades in after a decoded frame. The hero loops silently, pauses offscreen or in a hidden tab, offers a pause control, and returns to the photo if playback fails. Reduced-motion and data-saving preferences keep the photo and skip the video download.
+The current photo loads first and stays for at least three seconds. Video loading begins after the photo loads; the small clip downloads completely before playback to avoid interruptions on slow connections, then crossfades over 900 ms after a decoded frame. The hero loops silently, pauses offscreen or in a hidden tab, offers a pause control, and returns to the photo if playback fails. Autoplay, the crossfade, and the pause control remain available with reduced motion enabled.
 
 To regenerate the background copy from the montage:
 

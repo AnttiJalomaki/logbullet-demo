@@ -455,7 +455,7 @@ p {
   object-fit: cover;
   object-position: center;
   opacity: 0;
-  transition: opacity 600ms ease;
+  transition: opacity 900ms ease-in-out;
   pointer-events: none;
 }
 .hero-background-video[data-visible="true"] {
@@ -472,12 +472,6 @@ p {
 }
 .hero-video-toggle[hidden] {
   display: none;
-}
-@media (prefers-reduced-motion: reduce) {
-  .hero-background-video,
-  .hero-video-toggle {
-    display: none;
-  }
 }
 .hero-shade {
   position: absolute;
@@ -1379,6 +1373,9 @@ p {
     transition-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
+  }
+  .hero-background-video {
+    transition-duration: 900ms !important;
   }
 }
 /* Model, story and archive pages */

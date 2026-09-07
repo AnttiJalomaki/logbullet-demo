@@ -5,50 +5,197 @@ import { useSearchParams } from "next/navigation"
 import { useState } from "react"
 import {
   ArrowRight,
+  ArrowLeft,
   ArrowUpRight,
   BookOpen,
   Check,
+  ChevronRight,
   Printer,
   RotateCcw,
 } from "lucide-react"
 import type { Locale } from "@/lib/i18n"
-import { maintenanceGuides } from "@/lib/manual"
+import {
+  findManualTopics,
+  maintenanceGuides,
+  manualCategories,
+  manualTopics,
+} from "@/lib/manual"
+import { BarSearch } from "./bar-search"
 export function ManualContent({ locale }: { locale: Locale }) {
   const fi = locale === "fi"
   const params = useSearchParams()
-  const guide =
-    maintenanceGuides.find((item) => item.id === params.get("guide")) ??
-    maintenanceGuides[0]
+  const root = `/${locale}/manual`
+  const guide = maintenanceGuides.find(
+    (item) => item.id === params.get("guide")
+  )
+  const selectedTopic = manualTopics.find((item) => item.guide === guide?.id)
+  const selectedCategory = manualCategories.find(
+    (item) =>
+      item.id === (guide ? selectedTopic?.category : params.get("category"))
+  )
+  const query = params.get("q") ?? ""
+  const topics = findManualTopics(query, selectedCategory?.id)
+  const allLabel = fi ? "Kaikki aiheet" : "All topics"
+  function search(value: string) {
+    const next = new URLSearchParams(params)
+    next.delete("guide")
+    if (value) next.set("q", value)
+    else next.delete("q")
+    window.history.replaceState(
+      null,
+      "",
+      `${root}${next.size ? `?${next}` : ""}`
+    )
+  }
+  function selectCategory(value: string) {
+    const next = new URLSearchParams(params)
+    next.delete("guide")
+    if (value) next.set("category", value)
+    else next.delete("category")
+    window.history.pushState(null, "", `${root}${next.size ? `?${next}` : ""}`)
+  }
   return (
-    <div className="manual-page">
-      <section className="manual-hero">
-        <h1>
-          {fi
-            ? "Tunne koneesi.\nPidä se töissä."
-            : "Know your machine.\nKeep it working."}
-        </h1>
-        <p>
-          {fi
-            ? "Selkeät ohjeet tavallisiin huoltotöihin ja päivittäisiin tarkistuksiin."
-            : "Straightforward guides for routine maintenance and everyday checks."}
-        </p>
-      </section>
-      <nav
-        className="manual-guide-nav"
-        aria-label={fi ? "Huolto-ohjeet" : "Maintenance guides"}
-      >
-        {maintenanceGuides.map((item) => (
+    <div className="manual-workspace">
+      <div className="section-toolbar manual-toolbar">
+        <Link className="section-toolbar-title" href={root}>
+          {fi ? "Käyttöohjeet" : "Manual"}
+        </Link>
+        <BarSearch
+          label={fi ? "Hae ohjeista" : "Search manuals"}
+          clearLabel={fi ? "Tyhjennä haku" : "Clear search"}
+          value={query}
+          onChange={search}
+        />
+        <nav
+          className="section-toolbar-actions"
+          aria-label={fi ? "Ohjeiden navigaatio" : "Manual navigation"}
+        >
           <Link
-            href={`/${locale}/manual?guide=${item.id}`}
-            scroll={false}
-            key={item.id}
-            aria-current={guide.id === item.id ? "page" : undefined}
+            href={root}
+            aria-label={allLabel}
+            aria-current={
+              !guide && !selectedCategory && !query ? "page" : undefined
+            }
           >
-            {item.label[locale]}
+            <BookOpen size={20} />
+            <span className="section-action-label">{allLabel}</span>
           </Link>
+        </nav>
+      </div>
+      <nav
+        className="manual-category-nav"
+        aria-label={fi ? "Ohjeiden aihealueet" : "Manual categories"}
+      >
+        <button
+          type="button"
+          aria-pressed={!selectedCategory}
+          onClick={() => selectCategory("")}
+        >
+          {allLabel}
+        </button>
+        {manualCategories.map((category) => (
+          <button
+            type="button"
+            key={category.id}
+            aria-pressed={selectedCategory?.id === category.id}
+            onClick={() => selectCategory(category.id)}
+          >
+            {category.name[locale]}
+          </button>
         ))}
       </nav>
-      <Guide key={guide.id} guide={guide} locale={locale} />
+      <div className="manual-page">
+        {guide ? (
+          <>
+            <Link
+              className="manual-back"
+              href={
+                selectedCategory
+                  ? `${root}?category=${selectedCategory.id}`
+                  : root
+              }
+            >
+              <ArrowLeft size={18} />
+              {selectedCategory?.name[locale] ?? allLabel}
+            </Link>
+            <Guide key={guide.id} guide={guide} locale={locale} />
+          </>
+        ) : (
+          <>
+            <h1 className="sr-only">{fi ? "Käyttöohjeet" : "Manual"}</h1>
+            <div className="manual-library-summary">
+              <p role="status">
+                {topics.length}{" "}
+                {fi
+                  ? topics.length === 1
+                    ? "aihe"
+                    : "aihetta"
+                  : topics.length === 1
+                    ? "topic"
+                    : "topics"}
+                {query && <> · “{query}”</>}
+              </p>
+              {(query || selectedCategory) && (
+                <Link href={root}>
+                  {fi ? "Tyhjennä rajaukset" : "Clear filters"}
+                </Link>
+              )}
+            </div>
+            <div className="manual-topic-grid">
+              {manualCategories.map((category) => {
+                const entries = topics.filter(
+                  (item) => item.category === category.id
+                )
+                if (!entries.length) return null
+                return (
+                  <section
+                    className="manual-topic-group"
+                    key={category.id}
+                    aria-labelledby={`manual-category-${category.id}`}
+                  >
+                    <h2 id={`manual-category-${category.id}`}>
+                      {category.name[locale]}
+                    </h2>
+                    <ul>
+                      {entries.map((topic) => (
+                        <li key={topic.id}>
+                          {topic.guide ? (
+                            <Link
+                              className="manual-topic-link"
+                              href={`${root}?guide=${topic.guide}`}
+                            >
+                              <span>{topic.title[locale]}</span>
+                              <ChevronRight size={18} />
+                            </Link>
+                          ) : (
+                            <button
+                              className="manual-topic-link"
+                              type="button"
+                              aria-disabled="true"
+                            >
+                              <span>{topic.title[locale]}</span>
+                              <ChevronRight size={18} />
+                            </button>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )
+              })}
+            </div>
+            {!topics.length && (
+              <div className="manual-no-results">
+                <h2>{fi ? "Aiheita ei löytynyt." : "No matching topics."}</h2>
+                <Link className="text-link" href={root}>
+                  {allLabel}
+                  <ArrowRight size={18} />
+                </Link>
+              </div>
+            )}
+          </>
+        )}
+      </div>
     </div>
   )
 }
@@ -65,7 +212,7 @@ function Guide({
     <article className="manual-article">
       <div className="manual-guide-intro">
         <div>
-          <h2>{guide.title[locale]}</h2>
+          <h1>{guide.title[locale]}</h1>
           <p>{guide.intro[locale]}</p>
           <h3>{fi ? "Ota valmiiksi" : "What to have ready"}</h3>
           <ul className="manual-tools">

@@ -31,10 +31,6 @@ export function HeroBackground({
     if (!elements.container || !elements.image || !elements.video) return
     const { container, image, video } = elements
 
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)")
-    const connection = (
-      navigator as Navigator & { connection?: { saveData?: boolean } }
-    ).connection
     let photoReady = false
     let holdComplete = false
     let inView = false
@@ -46,13 +42,8 @@ export function HeroBackground({
     let downloadController: AbortController | undefined
     let objectUrl: string | undefined
 
-    const motionAllowed = () => !reducedMotion.matches && !connection?.saveData
     const shouldPlay = () =>
-      holdComplete &&
-      inView &&
-      !document.hidden &&
-      !userPaused &&
-      motionAllowed()
+      holdComplete && inView && !document.hidden && !userPaused
 
     function cancelReveal() {
       if (frameCallback !== undefined) {
@@ -63,7 +54,10 @@ export function HeroBackground({
 
     function tryPlay() {
       if (disposed || !shouldPlay() || video.error || starting) return
-      if (!video.paused || video.readyState < HTMLMediaElement.HAVE_FUTURE_DATA) {
+      if (
+        !video.paused ||
+        video.readyState < HTMLMediaElement.HAVE_FUTURE_DATA
+      ) {
         return
       }
       starting = true
@@ -79,7 +73,7 @@ export function HeroBackground({
     }
 
     function loadVideo() {
-      if (!photoReady || !motionAllowed() || downloadController) return
+      if (!photoReady || downloadController) return
       downloadController = new AbortController()
       // Native preload can stop early. Download the small file completely so
       // background playback never depends on the connection keeping up.
@@ -139,10 +133,6 @@ export function HeroBackground({
     }
 
     function syncPlayback() {
-      if (!motionAllowed()) {
-        showPhoto()
-        return
-      }
       loadVideo()
       if (shouldPlay()) {
         tryPlay()
@@ -176,7 +166,6 @@ export function HeroBackground({
     video.addEventListener("waiting", showPhoto)
     video.addEventListener("error", showPhoto)
     document.addEventListener("visibilitychange", syncPlayback)
-    reducedMotion.addEventListener("change", syncPlayback)
     if (image.complete) onPhotoReady()
 
     return () => {
@@ -196,7 +185,6 @@ export function HeroBackground({
       video.removeEventListener("waiting", showPhoto)
       video.removeEventListener("error", showPhoto)
       document.removeEventListener("visibilitychange", syncPlayback)
-      reducedMotion.removeEventListener("change", syncPlayback)
       video.pause()
       video.removeAttribute("src")
       video.load()

@@ -1,14 +1,10 @@
 import type { Locale } from "./i18n"
 const en = {
-  title: "Keep your machine working.",
-  intro:
-    "Service essentials, spare parts and the right tools for the next job.",
   shop: "Service parts",
   account: "My account",
   cart: "Cart",
   search: "Search parts",
   placeholder: "Search by part name or number…",
-  searchHint: "Try “filter”, “bearing” or a part number.",
   categories: "Categories",
   allCategories: "All parts",
   machine: "Your machine",
@@ -122,14 +118,11 @@ const en = {
   catalogLoading: "Loading parts…",
 }
 const fi: Record<keyof typeof en, string> = {
-  title: "Pidä koneesi töissä.",
-  intro: "Huoltotarvikkeet, varaosat ja oikeat työkalut seuraavaan työhön.",
   shop: "Varaosat",
   account: "Oma tili",
   cart: "Ostoskori",
   search: "Etsi varaosia",
   placeholder: "Hae osan nimellä tai numerolla…",
-  searchHint: "Kokeile “suodatin”, “laakeri” tai osanumeroa.",
   categories: "Tuoteryhmät",
   allCategories: "Kaikki osat",
   machine: "Oma koneesi",
