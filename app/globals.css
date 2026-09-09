@@ -2055,22 +2055,20 @@ p {
   display: flex;
   flex-direction: column;
   background: #edeeea;
-  padding: 25px 30px 18px;
+  padding: 12px 30px 18px;
   min-width: 0;
   position: relative;
   overflow: hidden;
 }
-.visualizer-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  z-index: 2;
-}
 .view-toggle {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
   padding: 3px;
-  background: #dadcd480;
-  flex-shrink: 0;
+  background: var(--muted);
+  border: 1px solid var(--border);
+  box-shadow: 0 3px 12px #00000008;
 }
 .view-toggle button {
   display: flex;
@@ -2086,18 +2084,17 @@ p {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 30px 0;
+  padding: 0 0 12px;
 }
 .config-photo {
   height: 100%;
-  max-height: 620px;
   width: 100%;
   position: relative;
   overflow: hidden;
   border-radius: 2px;
 }
 .config-photo > img {
-  object-fit: cover;
+  object-fit: contain;
   animation: photo-enter 0.4s ease-out;
 }
 .config-photo-controls {
@@ -2267,7 +2264,7 @@ p {
   margin-top: 3px;
 }
 .model-option-image {
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 2px;
 }
 .standard-equipment {
@@ -2416,26 +2413,13 @@ p {
 }
 .config-bottom-bar {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   height: 96px;
   gap: 25px;
   background: var(--paper);
   border-top: 1px solid var(--border);
   padding: 15px 32px;
-}
-.config-bottom-model {
-  flex: 1;
-}
-.config-bottom-model .eyebrow {
-  font-size: 1rem;
-  color: var(--muted-foreground);
-  margin-bottom: 5px;
-}
-.config-bottom-model > strong {
-  font-size: 23px;
-  font-weight: 500;
-  letter-spacing: -0.05em;
 }
 .config-total {
   margin-right: 20px;
@@ -2714,7 +2698,7 @@ p {
     padding: 45px;
   }
   .visualizer {
-    padding: 35px 55px 20px;
+    padding: 12px 55px 20px;
   }
   .config-section-heading h1 {
     font-size: 38px;
@@ -2731,11 +2715,7 @@ p {
     font-size: 30px;
   }
   .visualizer {
-    padding: 20px 20px 15px;
-  }
-  .visualizer-top {
-    flex-wrap: wrap;
-    gap: 15px;
+    padding: 12px 20px 15px;
   }
   .focus-parts {
     gap: 1px;
@@ -2757,9 +2737,6 @@ p {
   }
   .config-total > div > span {
     font-size: 1rem;
-  }
-  .config-bottom-model strong {
-    font-size: 20px;
   }
   .config-continue[data-slot="button"] {
     min-width: 205px;
@@ -2796,13 +2773,7 @@ p {
   .visualizer {
     height: 490px;
     min-height: 490px;
-    padding: 20px 5% 12px;
-  }
-  .visualizer-top {
-    flex-wrap: nowrap;
-  }
-  .visualizer-stage {
-    padding: 22px 0 12px;
+    padding: 12px 5%;
   }
   .visualizer-note {
     margin-top: 3px;
@@ -2871,9 +2842,6 @@ p {
     z-index: 40;
     padding: 15px 5% calc(15px + env(safe-area-inset-bottom));
     box-shadow: 0 -6px 25px #00000005;
-  }
-  .config-bottom-model {
-    display: none;
   }
   .config-total {
     text-align: left;
@@ -2951,7 +2919,7 @@ p {
   .visualizer {
     height: 385px;
     min-height: 385px;
-    padding: 15px 4% 10px;
+    padding: 12px 4% 10px;
   }
   .view-toggle button {
     font-size: 1rem;
@@ -3435,15 +3403,6 @@ p {
 .machine-card-bottom strong {
   font-size: 1.125rem;
 }
-.visualizer-model {
-  font-size: 1.125rem;
-  font-weight: 600;
-  line-height: 1.3;
-}
-.visualizer-top {
-  flex-wrap: wrap;
-  gap: 12px;
-}
 .focus-parts {
   justify-content: flex-start;
   flex-wrap: nowrap;
@@ -3585,12 +3544,6 @@ p {
   }
 }
 @media (max-width: 800px) {
-  .visualizer-model {
-    font-size: 1rem;
-  }
-  .visualizer-stage {
-    padding-top: 14px;
-  }
   .config-steps {
     gap: 14px;
   }
@@ -3714,10 +3667,6 @@ p {
   }
   .config-steps {
     gap: 16px;
-  }
-  .visualizer-top {
-    justify-content: space-between;
-    gap: 6px;
   }
   .view-toggle button {
     gap: 5px;

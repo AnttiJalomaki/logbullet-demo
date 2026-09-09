@@ -39,7 +39,7 @@ export const machines: Machine[] = [
   {
     id: "logbullet",
     name: "Logbullet",
-    tagline: l("Simply capable.", "Yksinkertaisesti kyvykäs."),
+    tagline: l("Small and agile", "pieni ja ketterä"),
     description: l(
       "The original compact forwarder. Simple to operate, easy to transport, and at home between the trees.",
       "Alkuperäinen pienajokone. Helppo käyttää ja kuljettaa, kuin kotonaan puiden välissä."
@@ -297,7 +297,7 @@ export const machines: Machine[] = [
   {
     id: "superbullet",
     name: "Superbullet",
-    tagline: l("Your everyday, upgraded.", "Enemmän jokaiseen työpäivään."),
+    tagline: l("Weather protection and efficiency", "säänsuojaa ja tehokkuutta"),
     description: l(
       "Compact outside. Comfortable inside. A closed cabin, intuitive mini levers and more power for your everyday forestry.",
       "Kompakti ulkoa. Mukava sisältä. Umpiohjaamo, kätevät minivivut ja lisää voimaa päivittäisiin metsätöihin."
@@ -386,8 +386,8 @@ export const machines: Machine[] = [
     id: "megamax",
     name: "Megamax",
     tagline: l(
-      "Think bigger. Tread lightly.",
-      "Ajattele isommin. Kulje kevyemmin."
+      "The most powerful harvester or tractor",
+      "voimakkain harvesteri tai traktori"
     ),
     description: l(
       "The biggest member of the family. More carrying capacity, a spacious cabin and the versatility to take on bigger work.",

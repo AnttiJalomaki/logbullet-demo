@@ -359,10 +359,6 @@ export function Configurator({
           </section>
         </div>
         <div className="config-bottom-bar">
-          <div className="config-bottom-model">
-            <span className="eyebrow">{d.config.model}</span>
-            <strong>{machine.name}</strong>
-          </div>
           <div className="config-total" aria-live="polite" aria-atomic="true">
             <div>
               <span>{d.config.estimate}</span>

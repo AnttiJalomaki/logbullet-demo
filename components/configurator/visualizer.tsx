@@ -58,8 +58,7 @@ export function Visualizer({
   const parts: FocusPart[] = ["all", "cabin", "crane", "wheels", "load"]
   return (
     <div className={`visualizer ${view === "3d" ? "visualizer-3d" : ""}`}>
-      <div className="visualizer-top">
-        <span className="visualizer-model">{machine.name}</span>
+      <div className="visualizer-stage">
         <div className="segment-control view-toggle">
           <button
             aria-pressed={view === "photo"}
@@ -79,8 +78,6 @@ export function Visualizer({
             {d.config.concept}
           </button>
         </div>
-      </div>
-      <div className="visualizer-stage">
         {view === "3d" ? (
           <>
             <MachineScene
@@ -105,7 +102,6 @@ export function Visualizer({
               fill
               preload
               sizes="(max-width: 800px) 100vw, 65vw"
-              className="image-cover"
             />
             {focus === "all" && machine.images.length > 1 && (
               <div className="config-photo-controls">
