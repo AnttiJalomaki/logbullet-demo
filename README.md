@@ -1,6 +1,6 @@
 # Logbullet demo
 
-A bilingual, photography-led website and guided machine configurator built with the existing Next.js 16.2.6, React 19, Tailwind 4, shadcn/Base UI and Bun starter. Ready for a standard Next.js deployment on Vercel.
+A bilingual, photography-led website and guided machine configurator built with the existing Next.js 16.4.2, React 19.3, Tailwind 4, shadcn/Base UI and Bun starter. Ready for a standard Next.js deployment on Vercel.
 
 ## Run locally
 
@@ -53,6 +53,8 @@ bun run lint
 bun run typecheck
 bun run build
 ```
+
+TypeScript follows Microsoft's [side-by-side compiler setup](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/#running-side-by-side-with-typescript-6.0). The `@typescript/native` alias supplies TypeScript 7's `tsc` for `bun run typecheck`. The `typescript` alias supplies the TypeScript 6 compatibility API required by `typescript-eslint`; Next.js also selects its `tsc6` for the production build. Both aliases retain caret version ranges.
 
 Fifteen tests cover pricing, equipment compatibility, mutually exclusive options, unknown query options, unpriced equipment, fuzzy part search, cart quantities, saved-price snapshots and saved-order parsing. Browser checks cover desktop and mobile layouts, configuration, price changes, camera focus, language switching, order saving/download/deletion and media interactions.
 
